@@ -86,7 +86,10 @@ function renderCaptions(captions) {
     const card = document.createElement("article"); card.className = "caption-card";
     const head = document.createElement("div"); head.className = "caption-card-head";
     const label = document.createElement("span"); label.className = "caption-label";
-    label.textContent = `${currentLang === "id" ? "CAPTION" : "CAPTION"} 0${index+1}`;
+    const angleLabels = currentLang === "id"
+      ? ["01 · RELATABLE", "02 · SINGKAT & KUAT", "03 · AJAKAN BERTINDAK"]
+      : ["01 · RELATABLE", "02 · SHORT & PUNCHY", "03 · CALL TO ACTION"];
+    label.textContent = angleLabels[index] || `CAPTION 0${index+1}`;
     const button = document.createElement("button"); button.type = "button"; button.className = "copy-btn";
     button.innerHTML = `<span aria-hidden="true">▢</span> ${translations[currentLang].copy}`;
     button.addEventListener("click", async () => {

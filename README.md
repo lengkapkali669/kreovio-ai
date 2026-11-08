@@ -29,3 +29,13 @@ The endpoint is `POST /api/generate`. It uses the existing Workers AI binding `A
 - Complete privacy policy and terms for the final service.
 - Check brand/domain availability before investing in branding.
 - Test copy behavior in supported browsers and mobile devices.
+
+
+## Version 1.2.0 — Caption quality update
+- Reworked the copywriting prompt for more natural, platform-aware captions.
+- Enforces three distinct creative angles: relatable, short/punchy, and action-oriented.
+- Stronger factual guardrails to reduce invented product claims, prices, discounts, and deadlines.
+- More robust JSON response parsing and clearer server errors.
+- Frontend labels now communicate each caption's creative direction.
+
+Deployment: replace the repository files with this ZIP's contents, commit to `main`, and let Cloudflare Pages deploy. Keep the existing Workers AI binding named `AI`.
