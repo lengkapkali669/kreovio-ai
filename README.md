@@ -1,34 +1,31 @@
-# Kreovio AI v1.0 — Cloudflare Pages
+# Kreovio AI v1.1 — Cloudflare Pages
 
-Bilingual AI Caption Generator (Indonesia/English), Dark Purple Neon.
+Bilingual AI Caption Generator. Dark Purple Neon UI, individual copy buttons, three separate result cards, regenerate action, and stricter factual prompt.
 
-## Deploy paling mudah: GitHub + Cloudflare Pages
-1. Buat repository GitHub baru bernama `kreovio-ai`.
-2. Upload semua isi ZIP ke root repository. Pastikan `index.html`, `functions/`, `assets/`, `data/`, dan `wrangler.jsonc` terlihat langsung di root.
-3. Cloudflare Dashboard → Workers & Pages → Create → Pages → Connect to Git.
-4. Pilih repository tersebut. Framework preset: **None**. Build command: kosongkan. Build output directory: `.`
-5. Deploy.
-6. Project → Settings → Bindings → Add → Workers AI. Variable name harus `AI`. Simpan dan lakukan redeploy.
-7. Buka alamat `*.pages.dev` dan coba generator.
+## Deploy update
+1. Extract this ZIP.
+2. In the existing GitHub repository `kreovio-ai`, replace the matching files with these updated files. Preserve the root structure.
+3. Commit to branch `main`. Cloudflare Pages should automatically deploy the new commit.
+4. Keep the existing Pages Workers AI binding named `AI`; do not add a duplicate binding.
+5. Test the live website on desktop and mobile.
 
-## Model AI
-Model starter: `@cf/meta/llama-3.1-8b-instruct-fp8`. Periksa katalog Workers AI di dashboard. Jika model tidak tersedia, ganti konstanta `MODEL` di `functions/api/generate.js` dengan ID text-generation model yang tersedia di akunmu.
+## Important backend note
+The endpoint is `POST /api/generate`. It uses the existing Workers AI binding `AI` and model `@cf/meta/llama-3.1-8b-instruct-fp8`. If your Cloudflare account no longer offers this model, choose an available text-generation model in Cloudflare's model catalog and update `MODEL` in `functions/api/generate.js`.
 
-## Alternatif CLI
-Perlu Node.js:
-```bash
-npm install -g wrangler
-wrangler login
-wrangler pages deploy . --project-name=kreovio-ai
+## Test request
+```json
+{
+  "topic": "Sneakers hitam untuk aktivitas sehari-hari",
+  "platform": "Instagram",
+  "tone": "Casual and friendly",
+  "outputLanguage": "Bahasa Indonesia",
+  "details": "Target audiens: mahasiswa. Jangan sebut diskon atau fitur yang tidak diberikan."
+}
 ```
-Untuk dev lokal dengan binding AI: `wrangler pages dev . --ai AI`.
 
-## Sebelum launch publik
-- Ganti email placeholder pada halaman kontak (belum ada formulir kontak).
-- Tambahkan rate limiting/abuse protection pada `/api/generate`.
-- Uji kuota dan biaya Workers AI. Request AI dapat menimbulkan biaya sesuai ketentuan akun/kuota.
-- Lengkapi kebijakan privasi dan syarat penggunaan.
-- Brand `Kreovio AI` adalah nama kerja; cek domain dan merek dagang sebelum investasi branding.
-
-## Endpoint
-`POST /api/generate` dengan JSON `{ "topic":"Produk baru", "platform":"Instagram", "tone":"Friendly", "outputLanguage":"Bahasa Indonesia", "details":"Promo launching" }`.
+## Before public launch
+- Add rate limiting / abuse protection to `/api/generate`.
+- Review Workers AI quotas and costs.
+- Complete privacy policy and terms for the final service.
+- Check brand/domain availability before investing in branding.
+- Test copy behavior in supported browsers and mobile devices.

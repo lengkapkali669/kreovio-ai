@@ -1,6 +1,5 @@
 {
   "brand": "Kreovio AI",
-  "version": "1.0.0",
   "tools": [
     {
       "id": "caption-generator",
@@ -9,22 +8,6 @@
         "en": "AI Caption Generator"
       },
       "status": "live"
-    },
-    {
-      "id": "product-description",
-      "name": {
-        "id": "AI Deskripsi Produk",
-        "en": "AI Product Description"
-      },
-      "status": "coming-soon"
-    },
-    {
-      "id": "content-ideas",
-      "name": {
-        "id": "AI Ide Konten",
-        "en": "AI Content Ideas"
-      },
-      "status": "coming-soon"
     }
   ]
 }

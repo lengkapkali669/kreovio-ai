@@ -1,1 +1,66 @@
-<!doctype html><html lang="id"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Kreovio AI — AI Caption Generator bilingual"><title>Kreovio AI — Caption Generator</title><link rel="stylesheet" href="/assets/css/style.css"></head><body><header><a class="logo" href="/">✦ KREVIO <b>AI</b></a><nav><a href="#tool" data-id="navtool">AI Tools</a><a href="#how" data-id="navhow">Cara Pakai</a><button id="lang">EN</button></nav></header><main><section class="hero"><small>✦ AI CONTENT STUDIO · BETA</small><h1 id="headline">Caption keren,<br><em>dibuat dalam hitungan detik.</em></h1><p id="intro">Buat caption Instagram, TikTok, dan promosi bisnis dengan bantuan AI.</p><a class="cta" href="#tool" id="try">Coba gratis sekarang ↘</a></section><section id="tool"><div class="sectiontop"><div><small>01 / GENERATOR</small><h2 id="tooltitle">AI Caption Generator</h2><p id="toolintro">Ceritakan kontenmu. Kreovio bantu merangkai kata.</p></div><span class="pill">BETA</span></div><form id="form"><div class="grid"><label><span id="ltopic">Topik / produk</span><input id="topic" maxlength="180" required placeholder="Contoh: Sneakers hitam edisi terbaru"></label><label><span id="lplatform">Platform</span><select id="platform"><option>Instagram</option><option>TikTok</option><option>Facebook</option><option>LinkedIn</option><option>X</option></select></label><label><span id="ltone">Gaya bahasa</span><select id="tone"><option>Santai dan akrab</option><option>Profesional</option><option>Persuasif dan menjual</option><option>Lucu dan playful</option><option>Minimalis dan elegan</option><option>Energik dan berani</option></select></label><label><span id="llang">Bahasa caption</span><select id="outputLanguage"><option>Bahasa Indonesia</option><option>English</option><option>Campuran Indonesia dan English</option></select></label></div><label class="wide"><span id="ldetails">Detail tambahan (opsional)</span><textarea id="details" maxlength="500" rows="3" placeholder="Keunggulan, promo, target audiens..."></textarea></label><div class="actions"><small id="privacy">Jangan masukkan data pribadi atau rahasia.</small><button id="submit" type="submit">Buat caption ✦</button></div></form><section id="result" hidden><div class="resulthead"><h3 id="resulttitle">Caption untukmu</h3><button id="copy" type="button">Salin hasil</button></div><pre id="output"></pre><small id="hint">Periksa kembali hasil sebelum dipublikasikan.</small></section><p id="error" hidden></p></section><section id="how"><small>02 / SIMPLE WORKFLOW</small><h2 id="howtitle">Dari ide ke caption.</h2><div class="steps"><article><b>01</b><h3 id="s1">Isi konteks</h3><p id="s1p">Masukkan topik, platform, dan gaya bahasa.</p></article><article><b>02</b><h3 id="s2">Generate</h3><p id="s2p">AI menyusun caption berdasarkan detailmu.</p></article><article><b>03</b><h3 id="s3">Edit & gunakan</h3><p id="s3p">Salin hasil, sesuaikan, lalu publikasikan.</p></article></div></section><aside id="notice">Kreovio AI masih beta. Periksa fakta, harga, dan klaim promosi sebelum memublikasikan caption.</aside></main><footer>© <span id="year"></span> Kreovio AI · <a href="/about.html">Tentang</a> · <a href="/privacy-policy.html">Privasi</a></footer><script src="/assets/js/app.js" defer></script></body></html>
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#0b0712">
+  <meta name="description" content="Kreovio AI membantu membuat caption media sosial yang menarik dalam hitungan detik.">
+  <title>Kreovio AI — Create better captions</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="/" aria-label="Kreovio AI home"><span class="brand-mark">✦</span><span>KREVIO<span class="brand-ai"> AI</span></span></a>
+  <nav class="nav-links"><a href="#generator" data-i18n="navGenerator">AI Caption</a><a href="#how" data-i18n="navHow">How it works</a></nav>
+  <button class="lang-toggle" id="langToggle" type="button" aria-label="Switch language">EN</button>
+</header>
+<main>
+  <section class="hero">
+    <div class="hero-orb orb-one"></div><div class="hero-orb orb-two"></div>
+    <div class="eyebrow"><span class="pulse"></span><span data-i18n="eyebrow">AI CONTENT STUDIO · BETA</span></div>
+    <h1 data-i18n-html="heroTitle">Your ideas,<br><span>caption-ready.</span></h1>
+    <p class="hero-copy" data-i18n="heroCopy">Turn a simple idea into social captions that sound like you. Made for creators, brands, and businesses.</p>
+    <a class="hero-cta" href="#generator"><span data-i18n="heroCta">Create your caption</span><span aria-hidden="true">↘</span></a>
+    <div class="hero-proof"><span>✦</span><span data-i18n="heroProof">Three creative directions. One simple prompt.</span></div>
+  </section>
+
+  <section class="generator-section" id="generator">
+    <div class="section-heading">
+      <div><div class="eyebrow section-eyebrow">01 / <span data-i18n="sectionEyebrow">THE GENERATOR</span></div><h2 data-i18n="toolTitle">AI Caption Generator</h2><p data-i18n="toolSubtitle">Give us the context. We’ll help you find the words.</p></div>
+      <span class="beta-pill">BETA</span>
+    </div>
+    <div class="generator-card">
+      <form id="captionForm">
+        <div class="field-grid">
+          <label class="field"><span data-i18n="topicLabel">What is your post about?</span><input id="topic" name="topic" maxlength="180" required placeholder="e.g. New black everyday sneakers" data-i18n-placeholder="topicPlaceholder"></label>
+          <label class="field"><span data-i18n="platformLabel">Platform</span><select id="platform" name="platform"><option>Instagram</option><option>TikTok</option><option>Facebook</option><option>LinkedIn</option><option>X</option></select></label>
+          <label class="field"><span data-i18n="toneLabel">Writing style</span><select id="tone" name="tone"><option value="Casual and friendly" data-i18n="toneCasual">Casual & friendly</option><option value="Professional" data-i18n="tonePro">Professional</option><option value="Persuasive and sales-focused" data-i18n="toneSales">Persuasive</option><option value="Funny and playful" data-i18n="toneFunny">Funny & playful</option><option value="Minimal and elegant" data-i18n="toneMinimal">Minimal & elegant</option><option value="Bold and energetic" data-i18n="toneBold">Bold & energetic</option></select></label>
+          <label class="field"><span data-i18n="languageLabel">Caption language</span><select id="outputLanguage" name="outputLanguage"><option value="Bahasa Indonesia">Bahasa Indonesia</option><option value="English">English</option><option value="Mixed Indonesian and English">Mix ID + EN</option></select></label>
+        </div>
+        <label class="field full-field"><span data-i18n="detailsLabel">Extra details <span class="optional" data-i18n="optional">(optional)</span></span><textarea id="details" name="details" maxlength="500" rows="4" placeholder="Product facts, audience, offer, or call to action..." data-i18n-placeholder="detailsPlaceholder"></textarea><span class="char-count"><span id="detailCount">0</span>/500</span></label>
+        <div class="form-footer"><p class="privacy-note"><span aria-hidden="true">ⓘ</span><span data-i18n="privacyNote">Don’t include passwords or sensitive personal information.</span></p><button class="generate-btn" id="generateBtn" type="submit"><span data-i18n="generate">Generate captions</span><span aria-hidden="true">✦</span></button></div>
+      </form>
+      <div class="error-box" id="errorBox" role="alert" hidden></div>
+      <section class="result-panel" id="resultPanel" aria-live="polite" hidden>
+        <div class="result-top"><div><div class="result-kicker" data-i18n="resultKicker">YOUR CREATIVE OPTIONS</div><h3 data-i18n="resultTitle">Three ways to say it.</h3><p data-i18n="resultSubtitle">Pick the one that feels right for your brand.</p></div><span class="result-count">03 <span data-i18n="options">OPTIONS</span></span></div>
+        <div class="caption-list" id="captionList"></div>
+        <p class="result-hint" id="resultHint" data-i18n="resultHint">Review names, facts, prices, and claims before publishing.</p>
+        <button class="regenerate-btn" id="regenerateBtn" type="button"><span aria-hidden="true">↻</span><span data-i18n="regenerate">Try another set</span></button>
+      </section>
+    </div>
+  </section>
+
+  <section class="how-section" id="how">
+    <div class="eyebrow section-eyebrow">02 / <span data-i18n="workflow">A SIMPLE WORKFLOW</span></div><h2 data-i18n="howTitle">From idea to caption.</h2>
+    <div class="steps">
+      <article class="step"><span class="step-number">01</span><div class="step-icon">⌁</div><h3 data-i18n="stepOneTitle">Add your context</h3><p data-i18n="stepOneCopy">Tell us what you’re posting, where it’s going, and the tone you want.</p></article>
+      <article class="step"><span class="step-number">02</span><div class="step-icon">✧</div><h3 data-i18n="stepTwoTitle">Generate ideas</h3><p data-i18n="stepTwoCopy">Get three different caption directions, shaped around your brief.</p></article>
+      <article class="step"><span class="step-number">03</span><div class="step-icon">↗</div><h3 data-i18n="stepThreeTitle">Make it yours</h3><p data-i18n="stepThreeCopy">Copy your favorite, make any edits, and publish when ready.</p></article>
+    </div>
+  </section>
+  <aside class="notice"><span class="notice-icon">✦</span><p data-i18n="notice">Kreovio AI is in beta. AI can make mistakes—review the output before publishing.</p></aside>
+</main>
+<footer><a class="brand footer-brand" href="/"><span class="brand-mark">✦</span><span>KREVIO<span class="brand-ai"> AI</span></span></a><p>© <span id="year"></span> Kreovio AI. <span data-i18n="footer">Made for better ideas.</span></p><div><a href="/about.html" data-i18n="about">About</a><a href="/privacy-policy.html" data-i18n="privacy">Privacy</a></div></footer>
+<script src="/assets/js/app.js" defer></script>
+</body></html>
