@@ -1,0 +1,7 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "kreovio-ai",
+  "pages_build_output_dir": ".",
+  "compatibility_date": "2026-11-08",
+  "ai": { "binding": "AI" }
+}

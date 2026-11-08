@@ -1,0 +1,9 @@
+{
+  "brand": "Kreovio AI",
+  "languages": [
+    "id",
+    "en"
+  ],
+  "aiProvider": "Cloudflare Workers AI",
+  "model": "@cf/meta/llama-3.1-8b-instruct-fp8"
+}
