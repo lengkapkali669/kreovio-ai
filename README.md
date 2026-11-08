@@ -39,3 +39,7 @@ The endpoint is `POST /api/generate`. It uses the existing Workers AI binding `A
 - Frontend labels now communicate each caption's creative direction.
 
 Deployment: replace the repository files with this ZIP's contents, commit to `main`, and let Cloudflare Pages deploy. Keep the existing Workers AI binding named `AI`.
+
+
+## v1.2.1 reliability patch
+This update adds one automatic server-side retry when Workers AI returns malformed output, uses a lower temperature for the retry, and accepts only exactly three validated captions. It does not change the Workers AI binding name (`AI`) or the UI assets. Upload the full ZIP contents to the repository root and commit to `main`.
